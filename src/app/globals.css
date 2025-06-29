@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/* Dark Theme (Default) */
+:root {
+  --bg-color: #1c262d; 
+  --text-color: #bec1c6;
+  --text-secondary: #7a8288;
+}
+
+.light {
+  --bg-color: #ffffff;
+  --text-color: #393939;
+  --text-secondary: #535d5c;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+/* Thin scrollbar that blends with the background */
+aside::-webkit-scrollbar {
+  width: 6px;
+}
+
+aside::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+aside::-webkit-scrollbar-thumb {
+  background-color: #4a4a4a;
+  border-radius: 4px;
+}
+
+/* Firefox support */
+aside {
+  scrollbar-width: thin;
+  scrollbar-color: #4a4a4a var(--bg-color);
+}
