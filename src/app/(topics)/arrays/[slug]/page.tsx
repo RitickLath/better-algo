@@ -62,11 +62,13 @@ const markdownMap: Record<string, string> = {
   "moores-voting-majority-element": mooresVotingMajorityElement,
 };
 
-const Arrays = async ({ params }: { params: { slug: string } }) => {
+export default async function Arrays({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = await params;
 
   const markdown = markdownMap[slug] || "404 - Topic Not Found";
   return <MarkdownWrapper>{markdown}</MarkdownWrapper>;
-};
-
-export default Arrays;
+}
