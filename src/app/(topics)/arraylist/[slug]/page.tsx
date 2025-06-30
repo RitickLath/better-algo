@@ -20,7 +20,7 @@ const markdownMap: Record<string, string> = {
 export default async function Arraylist({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
   const markdown = markdownMap[slug] || "404 - Topic Not Found";

@@ -16,9 +16,9 @@ const markdownMap: Record<string, string> = {
 export default async function TwoDArrays({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const { slug } = params;
+  const { slug } = await params;
   const markdown = markdownMap[slug] || "404 - Topic Not Found";
   return <MarkdownWrapper>{markdown}</MarkdownWrapper>;
 }
