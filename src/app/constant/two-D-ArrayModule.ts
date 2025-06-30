@@ -6,7 +6,7 @@ export const twoDArrayModule = {
       items: [
         {
           name: "Basics & Memory",
-          href: "/2d-arrays/basics",
+          href: "/2d-arrays/2d-basics",
         },
       ],
     },

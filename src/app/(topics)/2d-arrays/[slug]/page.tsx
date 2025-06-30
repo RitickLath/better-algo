@@ -1,13 +1,13 @@
 import MarkdownWrapper from "@/app/component/MarkdownWrapper";
 import {
-  basicsMemory,
   spiralMatrix,
   diagonalSum,
   searchInMatrix,
+  basics,
 } from "@/app/markdowns/2dArrays";
 
 const markdownMap: Record<string, string> = {
-  basics: basicsMemory,
+  "2d-basics": basics,
   "spiral-matrix": spiralMatrix,
   "diagonal-sum": diagonalSum,
   "search-in-matrix": searchInMatrix,
