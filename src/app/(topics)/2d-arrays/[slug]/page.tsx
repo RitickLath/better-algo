@@ -18,7 +18,7 @@ export default async function TwoDArrays({
 }: {
   params: { slug: string };
 }) {
-  const { slug } = await params;
+  const { slug } = params;
   const markdown = markdownMap[slug] || "404 - Topic Not Found";
   return <MarkdownWrapper>{markdown}</MarkdownWrapper>;
 }
