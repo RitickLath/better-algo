@@ -23,8 +23,8 @@ const markdownMap: Record<string, string> = {
   "gcd-using-brute-force": findingGCDNative,
 };
 
-const BasicMaths = ({ params }: { params: { slug: string } }) => {
-  const { slug } = params;
+const BasicMaths = async ({ params }: { params: { slug: string } }) => {
+  const { slug } = await params;
 
   const markdown = markdownMap[slug] || "404 - Topic Not Found";
   return <MarkdownWrapper>{markdown}</MarkdownWrapper>;
