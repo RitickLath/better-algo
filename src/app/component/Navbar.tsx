@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="px-4 sm:px-8 lg:px-12 py-3 flex justify-between text-white bg-[#009485] relative z-50">
+    <div className="sticky top-0 px-4 sm:px-8 lg:px-12 py-3 flex justify-between text-white bg-[#009485] z-50">
       <div className="flex items-center space-x-4">
         <h1 className="text-xl font-bold tracking-wide">Better Algo.</h1>
       </div>

@@ -8,25 +8,28 @@ export const topics = [
       {
         section: "Theory",
         items: [
-          { name: "Digit Count", href: "/basic-maths/digit-count" },
-          { name: "Base Conversion", href: "/basic-maths/base-conversion" },
+          { name: "Digit Count", href: "/basic-maths/count-digits-in-number" },
+          { name: "Base Conversion", href: "/basic-maths/convert-number-base" },
         ],
       },
       {
         section: "Beginner",
         items: [
-          { name: "Reverse Num", href: "/basic-maths/reverse" },
-          { name: "Palindrome", href: "/basic-maths/palindrome" },
-          { name: "Armstrong", href: "/basic-maths/armstrong" },
-          { name: "Divisors", href: "/basic-maths/divisors" },
-          { name: "Prime Check", href: "/basic-maths/prime" },
+          { name: "Reverse Num", href: "/basic-maths/reverse-a-number" },
+          { name: "Palindrome", href: "/basic-maths/check-number-palindrome" },
+          { name: "Armstrong", href: "/basic-maths/armstrong-number-check" },
+          { name: "Divisors", href: "/basic-maths/find-divisors-of-number" },
+          { name: "Prime Check", href: "/basic-maths/is-number-prime" },
         ],
       },
       {
         section: "Intermediate",
         items: [
-          { name: "GCD (Euclid)", href: "/basic-maths/gcd-euclid" },
-          { name: "GCD (Native)", href: "/basic-maths/gcd-native" },
+          {
+            name: "GCD (Euclid)",
+            href: "/basic-maths/gcd-using-euclidean-algorithm",
+          },
+          { name: "GCD (Native)", href: "/basic-maths/gcd-using-brute-force" },
         ],
       },
     ],
@@ -87,7 +90,7 @@ export const topics = [
         items: [
           {
             name: "Basics & Memory",
-            href: "/2darrays/Basics",
+            href: "/2d-arrays/Basics",
           },
         ],
       },
@@ -96,11 +99,11 @@ export const topics = [
         items: [
           {
             name: "Spiral Matrix",
-            href: "/2darrays/spiral-matrix",
+            href: "/2d-arrays/spiral-matrix",
           },
           {
             name: "Diagonal Sum",
-            href: "/2darrays/diagonal-sum",
+            href: "/2d-arrays/diagonal-sum",
           },
         ],
       },
@@ -109,7 +112,7 @@ export const topics = [
         items: [
           {
             name: "Search in Matrix",
-            href: "/2darrays/search-in-matrix",
+            href: "/2d-arrays/search-in-matrix",
           },
         ],
       },
@@ -145,15 +148,16 @@ export const topics = [
       },
     ],
   },
+
   {
     title: "String",
     subtopics: [
       {
         section: "Theory",
         items: [
-          { name: "Basics", href: "/string/theory/basics" },
-          { name: "Why Immutable", href: "/string/theory/why-immutable" },
-          { name: "String Builder", href: "/string/theory/string-builder" },
+          { name: "Basics", href: "/strings/theory/basics" },
+          { name: "Why Immutable", href: "/strings/theory/why-immutable" },
+          { name: "String Builder", href: "/strings/theory/string-builder" },
         ],
       },
       {
@@ -161,12 +165,12 @@ export const topics = [
         items: [
           {
             name: "Check Palindrome",
-            href: "/string/beginner/check-palindrome",
+            href: "/strings/beginner/check-palindrome",
           },
-          { name: "To Uppercase", href: "/string/beginner/to-uppercase" },
-          { name: "Compression", href: "/string/beginner/compression" },
-          { name: "Largest Word", href: "/string/beginner/largest-word" },
-          { name: "Shortest Path", href: "/string/beginner/shortest-path" },
+          { name: "To Uppercase", href: "/strings/beginner/to-uppercase" },
+          { name: "Compression", href: "/strings/beginner/compression" },
+          { name: "Largest Word", href: "/strings/beginner/largest-word" },
+          { name: "Shortest Path", href: "/strings/beginner/shortest-path" },
         ],
       },
     ],
