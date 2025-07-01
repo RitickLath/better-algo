@@ -1,7 +1,6 @@
 export const CountNumberOfDigits = `
 > \`Math.floor(Math.log10(Math.abs(number)) + 1)\`
-
-# ITERATIVE APPROACH
+# ITERATIVE APPROACH 
 
 This method involves dividing the integer by 10 repeatedly until it reduces to zero. Each division reduces the number of digits by one, and the total number of divisions equals the number of digits.
 
