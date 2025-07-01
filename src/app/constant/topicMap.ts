@@ -1,4 +1,5 @@
 import { arrayListModule } from "./arrayListModule";
+import { arrayModule } from "./arrayModule";
 import { linkedListModule } from "./linkedListModule";
 import { mathsModule } from "./mathModule";
 import { recursionModule } from "./recursionModule";
@@ -8,8 +9,9 @@ import { stringModule } from "./stringModule";
 import { twoDArrayModule } from "./two-D-ArrayModule";
 
 export const topics = [
+  { title: "Home" },
   mathsModule,
-  arrayListModule,
+  arrayModule,
   twoDArrayModule,
   sortingModule,
   stringModule,

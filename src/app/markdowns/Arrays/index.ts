@@ -1297,7 +1297,7 @@ export const maxSubarraySumKadane = `# MAX SUBARRAY SUM - III (KADANE’S)
 - If \`currentSum\` becomes negative, reset it to 0 — because continuing with a negative sum will reduce the total.
 - Keep updating a \`maxSum\` whenever \`currentSum\` is greater than it.
 
-![alt text](<../../../public/img/Kanade Sum.png>)
+![Kanade](/img/Kanade%20Sum.png)
 
 ### JAVA CODE:
 
