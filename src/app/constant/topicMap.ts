@@ -9,7 +9,6 @@ import { stringModule } from "./stringModule";
 import { twoDArrayModule } from "./two-D-ArrayModule";
 
 export const topics = [
-  { title: "Home" },
   mathsModule,
   arrayModule,
   twoDArrayModule,

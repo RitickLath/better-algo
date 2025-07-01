@@ -11,7 +11,7 @@ export default function LayoutClient({
       <Navbar />
       <div className="flex">
         <Sidebar />
-        <main className="flex-1 py-8 px-4">{children}</main>
+        <main className="overflow-hidden py-8 px-4">{children}</main>
       </div>
     </>
   );

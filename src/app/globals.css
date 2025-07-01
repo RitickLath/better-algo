@@ -2,7 +2,7 @@
 
 /* Dark Theme (Default) */
 :root {
-  --bg-color: #1c262d; 
+  --bg-color: #1c262d;
   --text-color: #bec1c6;
   --text-secondary: #7a8288;
 }
@@ -10,7 +10,7 @@
 .light {
   --bg-color: #ffffff;
   --text-color: #393939;
-  --text-secondary: #535d5c;
+  --text-secondary: #000000;
 }
 
 body {
