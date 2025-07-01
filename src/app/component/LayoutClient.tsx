@@ -1,16 +1,23 @@
+"use client";
+
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
+import { useState } from "react";
 
 export default function LayoutClient({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const [showSidebar, setShowSidebar] = useState(false);
   return (
     <>
-      <Navbar />
+      <Navbar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
       <div className="flex">
-        <Sidebar />
+        <div className="hidden lg:flex">
+          <Sidebar />
+        </div>
+        <div className="lg:hidden">{showSidebar && <Sidebar />}</div>
         <main className="overflow-hidden py-8 px-4">{children}</main>
       </div>
     </>

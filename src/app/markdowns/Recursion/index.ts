@@ -414,7 +414,7 @@ public static int nsum(int n) {
 
 ## CALL STACK TRACE
 
-![alt text](img/re6.png)
+![alt text](/img/re6.png)
 
 ### FUNCTION CALLS (GOING DEEPER INTO RECURSION)
 
