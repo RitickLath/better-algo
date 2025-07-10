@@ -8,6 +8,14 @@ export const arrayModule = {
         { name: "Array Creation", href: "/arrays/array-creation" },
         { name: "Input/Output", href: "/arrays/array-input-output" },
         { name: "Func Args", href: "/arrays/array-function-argument" },
+        {
+          name: "Why Index Starts at 0",
+          href: "/arrays/why-array-index-starts-at-0",
+        },
+        {
+          name: "32-bit vs 62-bit RAM",
+          href: "/arrays/what-32bit-62bit-mean",
+        },
       ],
     },
     {
@@ -40,8 +48,6 @@ export const arrayModule = {
         { name: "Max Sum (Naive)", href: "/arrays/max-subarray-sum-naive" },
         { name: "Max Sum (Prefix)", href: "/arrays/max-subarray-sum-prefix" },
         { name: "Max Sum (Kadane)", href: "/arrays/max-subarray-sum-kadane" },
-        { name: "Rainwater Trap", href: "/arrays/trapping-rainwater-theory" },
-        { name: "Rainwater Code", href: "/arrays/trapping-rainwater-code" },
         { name: "Sort 0s,1s,2s", href: "/arrays/dutch-national-flag-sort" },
         {
           name: "Majority Elem",

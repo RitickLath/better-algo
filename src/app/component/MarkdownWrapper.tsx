@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import MarkdownPreview from "@uiw/react-markdown-preview";
 
 const MarkdownWrapper = ({ children }: { children: string }) => {

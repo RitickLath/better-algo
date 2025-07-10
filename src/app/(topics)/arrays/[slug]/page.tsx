@@ -1,74 +1,65 @@
-import MarkdownWrapper from "@/app/component/MarkdownWrapper";
-import {
-  arrayTheory,
-  arrayCreation,
-  inputOutput,
-  linearSearch,
-  largestInAnArray,
-  secondLargestInArraySingleLoop,
-  reverseAnArray,
-  checkSortedOrNot,
-  minIncrementKOpsToEqual,
-  removeDuplicatesFromSorted,
-  rotateArrayByOne,
-  rotateArrayByK,
-  moveAllZerosToEnd,
-  findMissingNumber,
-  maxConsecutiveOnes,
-  unionOfTwoSortedArrays,
-  intersectionOfTwoSortedArrays,
-  pairsInArray,
-  printAllSubarrays,
-  maxSubarraySumNaive,
-  maxSubarraySumPrefixSum,
-  maxSubarraySumKadane,
-  trappingRainwaterTheory,
-  trappingRainwaterCode,
-  dutchNationalFlagSort,
-  mooresVotingMajorityElement,
-  functionalArgument,
-} from "@/app/markdowns/Arrays";
+import MarkdownWrapper from "../../../component/MarkdownWrapper";
 
-const markdownMap: Record<string, string> = {
-  "array-theory": arrayTheory,
-  "array-creation": arrayCreation,
-  "array-input-output": inputOutput,
-  "array-function-argument": functionalArgument,
+import fs from "node:fs";
+import path from "node:path";
 
-  "array-linear-search": linearSearch,
-  "largest-in-array": largestInAnArray,
-  "second-largest-in-array": secondLargestInArraySingleLoop,
-  "reverse-array": reverseAnArray,
-  "check-sorted": checkSortedOrNot,
-  "min-increment-k-ops": minIncrementKOpsToEqual,
-  "remove-duplicates-sorted": removeDuplicatesFromSorted,
-  "rotate-array-by-one": rotateArrayByOne,
-  "rotate-array-by-k": rotateArrayByK,
-  "move-zeros-to-end": moveAllZerosToEnd,
-  "find-missing-number": findMissingNumber,
-  "max-consecutive-ones": maxConsecutiveOnes,
+export const arrayMarkdownMapping: Record<string, string> = {
+  // Array Theory
+  "array-theory": "Array-Theory/INTRODUCTION.md",
+  "array-creation": "Array-Theory/ARRAY CREATION.md",
+  "array-input-output": "Array-Theory/ARRAYS INPUT, OUTPUT AND UPDATES.md",
+  "array-function-argument": "Array-Theory/ARRAY AS FUNCTIONAL ARGUMENT.md",
+  "why-array-index-starts-at-0":
+    "Array-Theory/WHY ARRAY INDEX STARTS FROM 0 AND NOT 1.md",
+  "what-32bit-62bit-mean": "Array-Theory/WHAT 32-BIT AND 62-BIT RAM MEAN.md",
 
-  "union-two-sorted-arrays": unionOfTwoSortedArrays,
-  "intersection-two-sorted-arrays": intersectionOfTwoSortedArrays,
-  "pairs-in-array": pairsInArray,
-  "print-all-subarrays": printAllSubarrays,
-  "max-subarray-sum-naive": maxSubarraySumNaive,
-  "max-subarray-sum-prefix": maxSubarraySumPrefixSum,
-  "max-subarray-sum-kadane": maxSubarraySumKadane,
+  // Array Beginner
+  "array-linear-search": "Array-Beginner/LINEAR SEARCH.md",
+  "largest-in-array": "Array-Beginner/LARGEST IN AN ARRAY.md",
+  "second-largest-in-array":
+    "Array-Beginner/SECOND LARGEST IN AN ARRAY (SINGLE LOOP).md",
+  "reverse-array": "Array-Beginner/REVERSE AN ARRAY.md",
+  "check-sorted": "Array-Beginner/CHECK SORTED OR NOT.md",
+  "min-increment-k-ops":
+    "Array-Beginner/REMOVE MINIMUM INCREMENT BY K OPERATIONS TO MAKE ALL EQUAL.md",
+  "remove-duplicates-sorted": "Array-Beginner/REMOVE DUPLICATES FROM SORTED.md",
+  "rotate-array-by-one": "Array-Beginner/ROTATE THE ARRAY BY ONE PLACE.md",
+  "rotate-array-by-k": "Array-Beginner/ROTATE THE ARRAY BY K PLACE.md",
+  "move-zeros-to-end":
+    "Array-Beginner/MOVE ALL ZERO AT THE END OF THE ARRAY.md",
+  "find-missing-number": "Array-Beginner/FIND MISSING NUMBER.md",
+  "max-consecutive-ones": "Array-Beginner/MAXIMUM CONSECUTIVE ONES.md",
 
-  "trapping-rainwater-theory": trappingRainwaterTheory,
-  "trapping-rainwater-code": trappingRainwaterCode,
-  "dutch-national-flag-sort": dutchNationalFlagSort,
-  "moores-voting-majority-element": mooresVotingMajorityElement,
+  // Array Intermediate
+  "union-two-sorted-arrays": "Array-Intermediate/UNION OF TWO SORTED ARRAY.md",
+  "intersection-two-sorted-arrays":
+    "Array-Intermediate/INTERSECTION OF TWO SORTED ARRAY.md",
+  "pairs-in-array": "Array-Intermediate/PAIRS IN ARRAY.md",
+  "print-all-subarrays": "Array-Intermediate/PRINT SUBARRAYS (IMP).md",
+  "max-subarray-sum-naive":
+    "Array-Intermediate/MAX SUBARRAY SUM - I (NATIVE).md",
+  "max-subarray-sum-prefix":
+    "Array-Intermediate/MAX SUBARRAY SUM - II (PREFIX SUM).md",
+  "max-subarray-sum-kadane":
+    "Array-Intermediate/MAX SUBARRAY SUM - III (KADANE’S).md",
+  "dutch-national-flag-sort":
+    "Array-Intermediate/SORT AN ARRAY OF 0’S, 1’S AND 2’S  DUTCH FLAG.md",
+  "moores-voting-majority-element":
+    "Array-Intermediate/MAJORITY ELEMENT  MOORE’S VOTING ALGORITHM.md",
 };
 
-export default async function Arrays({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+export default async function Arrays({ params }: { params: { slug: string } }) {
   const { slug } = await params;
+  console.log(slug);
+  const filePath = path.join(
+    process.cwd(),
+    "src/app/markdowns/ArrayMod/",
+    `${arrayMarkdownMapping[slug]}`
+  );
 
-  const markdown = markdownMap[slug] || "404 - Topic Not Found";
-  return <MarkdownWrapper>{markdown}</MarkdownWrapper>;
+  let data = "404 - Topic Not Found";
+  if (fs.existsSync(filePath)) {
+    data = fs.readFileSync(filePath, "utf-8");
+  }
+  return <MarkdownWrapper>{data}</MarkdownWrapper>;
 }
