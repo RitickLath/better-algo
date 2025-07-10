@@ -3,7 +3,11 @@ import fs from "node:fs";
 import path from "node:path";
 import { arrayMarkdownMapping } from "../../../lib/arrayMarkdownMapping";
 
-export default async function Arrays({ params }: { params: { slug: string } }) {
+export default async function Arrays({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = await params;
   console.log(slug);
   const filePath = path.join(
