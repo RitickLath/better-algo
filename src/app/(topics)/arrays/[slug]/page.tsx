@@ -12,7 +12,7 @@ export default async function Arrays({
   console.log(slug);
   const filePath = path.join(
     process.cwd(),
-    "src/app/markdowns/ArrayMod/",
+    "public/markdowns/ArrayMod/",
     `${arrayMarkdownMapping[slug]}`
   );
 

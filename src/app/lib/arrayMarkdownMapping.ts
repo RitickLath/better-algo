@@ -24,6 +24,7 @@ export const arrayMarkdownMapping: Record<string, string> = {
     "Array-Beginner/MOVE ALL ZERO AT THE END OF THE ARRAY.md",
   "find-missing-number": "Array-Beginner/FIND MISSING NUMBER.md",
   "max-consecutive-ones": "Array-Beginner/MAXIMUM CONSECUTIVE ONES.md",
+  "missing-number-in-an-array" : "Array-Beginner/MISSING NUMBER IN AN ARRAY.md",
 
   // Array Intermediate
   "union-two-sorted-arrays": "Array-Intermediate/UNION OF TWO SORTED ARRAY.md",

@@ -1,5 +1,19 @@
 # ROTATE THE ARRAY BY ONE PLACE
 
+Given an array of integers, rotate the array to the left by one position. In left rotation, each element shifts to the left by one, and the first element moves to the end.
+
+### SAMPLE INPUT
+
+```java
+int[] arr = {10, 20, 30, 40, 50};
+```
+
+### EXPECTED OUTPUT
+
+```java
+[50 ,10, 20, 30, 40]
+```
+
 ## LEFT ROTATE THE ARRAY BY ONE PLACE
 
 ### OPTIMAL SOLUTION: USING TEMP VARIABLE

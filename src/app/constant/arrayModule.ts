@@ -33,6 +33,7 @@ export const arrayModule = {
         { name: "Move Zeros", href: "/arrays/move-zeros-to-end" },
         { name: "Missing Num", href: "/arrays/find-missing-number" },
         { name: "Max 1s", href: "/arrays/max-consecutive-ones" },
+        { name: "Missing Number", href: "/arrays/missing-number-in-an-array" },
       ],
     },
     {
